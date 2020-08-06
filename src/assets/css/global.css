@@ -1,0 +1,35 @@
+@import "fonts.css";
+
+:root {
+  --primary: #191919;
+  --active: #E9A494;
+  --links: rgba(255, 255, 255, 0.6);
+
+  --font-links: "Futura PT Medium", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}

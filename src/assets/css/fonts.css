@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Futura PT Medium;
+  src: url("../fonts/FuturaPTMedium.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Proxima Nova Extrabold;
+  src: url("../fonts/Proxima Nova Extrabold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Proxima Nova Black;
+  src: url("../fonts/Proxima Nova Black.otf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Proxima Nova Regular;
+  src: url("../fonts/Proxima Nova Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Freight Sans Pro Medium Regular;
+  src: url("../fonts/Freight Sans Pro Medium Regular.ttf");
+  font-weight: normal;
+}
