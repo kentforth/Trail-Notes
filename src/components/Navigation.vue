@@ -53,7 +53,7 @@ export default {};
   font-family: "Proxima Nova Extrabold", sans-serif !important;
   line-height: 1em;
   color: #fff !important;
-  font-size: 1.5rem !important;
+  font-size: 1.3rem !important;
   margin: 0;
 }
 

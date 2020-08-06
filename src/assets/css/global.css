@@ -16,8 +16,9 @@ html {
 }
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: "Roboto", sans-serif;
+  font-family: "Proxima Nova Regular", sans-serif;
   margin: 0;
+  letter-spacing: .12em;
   padding: 0;
 }
 
@@ -32,4 +33,13 @@ body {
 .container {
   max-width: 70%;
   margin: 0 auto;
+}
+
+p {
+  color: #fff;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3em;
+  padding: 4em 0;
 }
