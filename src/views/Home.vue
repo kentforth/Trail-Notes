@@ -48,13 +48,99 @@
         <hr class="line" />
         <h2>SUMMER SPECIAL</h2>
 
-        <div class="price">
+        <div class="price" @click="showForm">
           <p>Click to join</p>
           <span>$</span>
           <strong>19.99</strong>
           <span>/First Year</span>
           <p>$9.99 Annual Renewal</p>
         </div>
+
+        <modal name="my-first-modal" :width="690" height="auto">
+          <div class="modal">
+            <div class="name">
+              <div class="first-name">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" />
+              </div>
+              <div class="last-name">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" />
+              </div>
+            </div>
+
+            <div class="email">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" />
+            </div>
+
+            <div class="email">
+              <label for="confirmEmail">Confirm Your Email</label>
+              <input type="email" id="confirmEmail" />
+            </div>
+
+            <div class="password">
+              <label for="password">Your Password</label>
+              <input type="password" id="password" />
+            </div>
+
+            <div class="describe">
+              <label for="interests">Describe Your Photography Interest</label>
+              <div id="interests">
+                <div class="interests-item">
+                  <input
+                    type="radio"
+                    id="enthusiast"
+                    name="interest"
+                    value="enthusiast"
+                  />
+                  <span>Outdoor Emthusiast</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                          type="radio"
+                          id="beginner"
+                          name="interest"
+                          value="beginner"
+                  />
+                  <span>Beginner</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                          type="radio"
+                          id="intermediate"
+                          name="interest"
+                          value="intermediate"
+                  />
+                  <span>Intermediate</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                          type="radio"
+                          id="amateur"
+                          name="interest"
+                          value="amateur"
+                  />
+                  <span>Serious Amateur</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                          type="radio"
+                          id="professional"
+                          name="interest"
+                          value="amateur"
+                  />
+                  <span>Professional</span>
+                </div>
+              </div>
+              <button class="btn-signUp" type="submit">SIGN UP</button>
+            </div>
+          </div>
+        </modal>
       </div>
     </div>
 
@@ -80,7 +166,7 @@
       </div>
     </div>
 
-      <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -89,12 +175,29 @@ import Navigation from "../components/Navigation";
 import Cards_Locations from "../components/Cards_Locations";
 import Footer from "../components/Footer";
 
+//Modal window
+import VModal from "vue-js-modal/dist/index.nocss.js";
+import "vue-js-modal/dist/styles.css";
+import Vue from "vue";
+
+Vue.use(VModal, {
+  adaptive: true
+});
+
 export default {
   name: "Home",
   components: {
     Navigation,
     Cards_Locations,
     Footer
+  },
+  methods: {
+    showForm() {
+      this.$modal.show("my-first-modal");
+    },
+    data() {
+      return {};
+    }
   }
 };
 </script>
@@ -249,4 +352,84 @@ export default {
   padding: 1em 0;
   margin-bottom: 0;
 }
+
+.modal {
+  padding: 2em;
+}
+
+.name {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.modal input {
+  padding: 0.7em 1.5em;
+  font-size: 1.2rem;
+}
+
+.modal input:focus {
+  border: 1px solid var(--active);
+  outline: none;
+}
+
+.email {
+  width: 100%;
+}
+
+input {
+  margin: 0.6em 0 1.6em 0;
+}
+
+label {
+  font-weight: 600;
+}
+
+label,
+input {
+  display: block;
+  text-align: left;
+}
+
+.email input,
+.password input {
+  width: 100%;
+}
+#interests {
+  margin-top: 1em;
+}
+
+.interests-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 0.5em;
+}
+
+.interests-item input {
+  margin: 0;
+}
+
+.interests-item span {
+  margin-left: 7px;
+}
+
+  .btn-signUp {
+    background-color: var(--active);
+    cursor: pointer;
+    outline: none;
+    border:none;
+    width: 100%;
+    padding: 1em 2em;
+    margin-top: 1.5em;
+    transition: all 0.1s linear;
+  }
+
+.btn-signUp:hover {
+  background-color: var(--primary);
+  color: var(--active);
+}
+
+
 </style>
