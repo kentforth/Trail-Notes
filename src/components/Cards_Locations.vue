@@ -1,5 +1,5 @@
 <template>
-  <div class="cards">
+  <div class="cards" data-aos="fade-up" data-aos-easing="ease-out">
     <div class="card-item">
       <div class="card-image">
         <img src="../assets/images/image - 002.jpg" alt="image canyon" />
@@ -47,8 +47,15 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
-  name: "Cards_Locations"
+  name: "Cards_Locations",
+  created() {
+    AOS.init({
+      duration: 500
+    });
+  }
 };
 </script>
 
