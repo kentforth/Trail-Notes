@@ -13,14 +13,14 @@
         <router-link to="/about">About</router-link>
         <router-link to="/contact">Contact</router-link>
       </div>
-
     </div>
-
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Navigation"
+};
 </script>
 
 <style scoped>
@@ -37,7 +37,7 @@ export default {};
   font-size: 0.8rem;
   color: var(--links);
   font-family: var(--font-links);
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
 }
 
 #nav a:hover {
@@ -46,7 +46,6 @@ export default {};
 
 #nav a.router-link-exact-active {
   color: var(--active);
-
 }
 
 .navigation-center a {
@@ -57,13 +56,8 @@ export default {};
   margin: 0;
 }
 
-
-
-  .container {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-  }
-
-
-
+.container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+}
 </style>

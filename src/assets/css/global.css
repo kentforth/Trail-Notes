@@ -2,7 +2,7 @@
 
 :root {
   --primary: #191919;
-  --active: #E9A494;
+  --active: #ffaf8a;
   --links: rgba(255, 255, 255, 0.6);
 
   --font-links: "Futura PT Medium", sans-serif;
@@ -18,7 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Proxima Nova Regular", sans-serif;
   margin: 0;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   padding: 0;
 }
 
@@ -42,4 +42,13 @@ p {
   margin: 0;
   line-height: 1.3em;
   padding: 4em 0;
+  font-family: "Proxima Nova Regular", sans-serif;
+}
+
+h2 {
+  font-size: 3.6vw;
+}
+
+a {
+  text-decoration: none;
 }
