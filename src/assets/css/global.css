@@ -4,8 +4,10 @@
   --primary: #191919;
   --active: #ffaf8a;
   --links: rgba(255, 255, 255, 0.6);
+  --link-document: #c70003;
 
   --font-links: "Futura PT Medium", sans-serif;
+  --font-big: 3vw;
 }
 
 * {
@@ -36,13 +38,13 @@ body {
 }
 
 p {
-  color: #fff;
-  font-size: 1.6em;
-  text-align: center;
-  margin: 0;
-  line-height: 1.3em;
-  padding: 4em 0;
-  font-family: "Proxima Nova Regular", sans-serif;
+  font-family: freight-sans-pro, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .01em;
+  line-height: 1.8em;
+  text-transform: none;
+  color: rgba(20,20,20,.8);
 }
 
 h2 {

@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About";
 import PageNotFound from "../views/PageNotFound";
+import Southwest_Locations from "../views/Southwest_Locations";
+import Contributing_Partners from "../views/Contributing_Partners";
 
 Vue.use(VueRouter);
 
@@ -30,6 +32,22 @@ const routes = [
       title: "About"
     },
     component: About
+  },
+  {
+    path: "/contributing-partners",
+    name: "Contributing Partners",
+    meta: {
+      title: "Contributing Partners"
+    },
+    component: Contributing_Partners
+  },
+  {
+    path: "/southwest-locations",
+    name: "Locations",
+    meta: {
+      title: "SouthWest"
+    },
+    component: Southwest_Locations
   }
 ];
 

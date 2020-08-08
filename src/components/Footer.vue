@@ -22,13 +22,14 @@ export default {
 <style scoped>
 .footer {
   background-color: var(--primary);
-  padding-bottom: 5em;
+  padding: 3em 0;
     margin: 0;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   max-width: 70%;
   margin: 0 auto;
 }

@@ -2,7 +2,7 @@
   <div id="nav">
     <div class="container">
       <div class="navigation-left">
-        <router-link to="/locations">Locations</router-link>
+        <router-link to="/southwest-locations">Locations</router-link>
         <router-link to="/pricing">Pricing</router-link>
         <router-link to="/members">Members</router-link>
       </div>

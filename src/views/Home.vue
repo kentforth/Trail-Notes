@@ -99,40 +99,40 @@
 
                 <div class="interests-item">
                   <input
-                          type="radio"
-                          id="beginner"
-                          name="interest"
-                          value="beginner"
+                    type="radio"
+                    id="beginner"
+                    name="interest"
+                    value="beginner"
                   />
                   <span>Beginner</span>
                 </div>
 
                 <div class="interests-item">
                   <input
-                          type="radio"
-                          id="intermediate"
-                          name="interest"
-                          value="intermediate"
+                    type="radio"
+                    id="intermediate"
+                    name="interest"
+                    value="intermediate"
                   />
                   <span>Intermediate</span>
                 </div>
 
                 <div class="interests-item">
                   <input
-                          type="radio"
-                          id="amateur"
-                          name="interest"
-                          value="amateur"
+                    type="radio"
+                    id="amateur"
+                    name="interest"
+                    value="amateur"
                   />
                   <span>Serious Amateur</span>
                 </div>
 
                 <div class="interests-item">
                   <input
-                          type="radio"
-                          id="professional"
-                          name="interest"
-                          value="amateur"
+                    type="radio"
+                    id="professional"
+                    name="interest"
+                    value="amateur"
                   />
                   <span>Professional</span>
                 </div>
@@ -403,7 +403,7 @@ input {
 .interests-item {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   margin-bottom: 0.5em;
 }
 
@@ -415,21 +415,19 @@ input {
   margin-left: 7px;
 }
 
-  .btn-signUp {
-    background-color: var(--active);
-    cursor: pointer;
-    outline: none;
-    border:none;
-    width: 100%;
-    padding: 1em 2em;
-    margin-top: 1.5em;
-    transition: all 0.1s linear;
-  }
+.btn-signUp {
+  background-color: var(--active);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 1em 2em;
+  margin-top: 1.5em;
+  transition: all 0.1s linear;
+}
 
 .btn-signUp:hover {
   background-color: var(--primary);
   color: var(--active);
 }
-
-
 </style>
