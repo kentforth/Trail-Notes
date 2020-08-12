@@ -23,7 +23,7 @@ export default {
 .footer {
   background-color: var(--primary);
   padding: 3em 0;
-    margin: 0;
+  margin: 0;
 }
 
 .nav {
@@ -38,10 +38,39 @@ export default {
   color: var(--active);
   text-transform: uppercase;
   font-size: 0.8rem;
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav a:hover {
   color: rgba(255, 175, 138, 0.5);
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 900px) {
+  .nav {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 0 1.5em 2em;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav a {
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+
 }
 </style>

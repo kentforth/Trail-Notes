@@ -214,4 +214,28 @@ export default {
     left: 0;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .navigation-center a {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-hamburger-item {
+    width: 25px;
+  }
+
+  .navigation-center a {
+    font-size: 0.8rem !important;
+  }
+
+  .adaptive-menu {
+    padding: 0;
+  }
+
+  .adaptive-link {
+    font-size: 2.5rem !important;
+  }
+}
 </style>

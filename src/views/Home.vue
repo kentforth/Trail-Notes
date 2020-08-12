@@ -248,6 +248,7 @@ export default {
 
 .details {
   padding-top: 5em;
+  font-family: "Proxima Nova Regular", sans-serif;
 }
 
 .details strong {
@@ -266,6 +267,7 @@ export default {
 
 .adventure p {
   padding: 1.3em 0 0 0;
+  color: #fff;
 }
 
 .line {
@@ -439,6 +441,61 @@ input {
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .show-way p {
+    padding-top: 2em;
+  }
+
+  .adventure {
+    padding-bottom: 5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .canyon-text {
+    font-size: 2.5rem;
+    top: 40%;
+    left: 15%;
+  }
+
+  .adventure {
+    padding-top: 3em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .adventure {
+    padding-bottom: 3em;
+  }
+
+  .price {
+    margin: 2.5em auto 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .canyon-text {
+    font-size: 1.8rem;
+  }
+
+  .price strong {
+    font-size: 3rem;
+  }
+
+  .price > span {
+    font-size: 1.7rem;
+  }
+
+  .price span:nth-child(4) {
+    transform:translate(-20px, 2.5em);
   }
 }
 </style>
