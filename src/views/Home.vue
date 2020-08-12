@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <Navigation />
-
     <!--      CANYON-->
     <div class="canyon">
       <div class="container">
@@ -216,7 +215,8 @@ export default {
   color: #fff;
   text-align: left;
   font-size: 3.6vw;
-  padding-top: 6em;
+  position: absolute;
+  top: 50%;
 }
 
 .show-way {
@@ -224,7 +224,11 @@ export default {
 }
 
 .show-way p {
-  padding: 5em 0 3em 0;
+  padding: 5em 0 0 0;
+  color: #fff;
+  margin-top: 0;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 2rem;
 }
 
 .show-way h1,
@@ -276,7 +280,7 @@ export default {
   width: 50%;
   margin: 2em auto;
   border: 1px solid var(--active);
-  padding: 2.5em 0;
+  padding: 1em 0;
   transition: all 0.1s linear;
 }
 
@@ -429,5 +433,12 @@ input {
 .btn-signUp:hover {
   background-color: var(--primary);
   color: var(--active);
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
 }
 </style>

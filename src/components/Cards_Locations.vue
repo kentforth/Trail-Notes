@@ -6,7 +6,7 @@
       </div>
       <div class="card-text">
         <h3>DEAD HORSE POINT</h3>
-        <p>
+        <p style="margin-bottom: 0; padding-bottom: 0.3em">
           Dead Horse Point - with its iconic gooseneck of the Colorado River is
           a must see when visiting the Moab, UT area.
         </p>
@@ -104,4 +104,6 @@ export default {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
+
+
 </style>

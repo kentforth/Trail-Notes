@@ -232,6 +232,8 @@ p {
   margin: 0 auto;
   padding-bottom: 0;
   width: 85%;
+  padding-top: 3em;
+  color: #fff;
 }
 
 .quote p:last-child {
