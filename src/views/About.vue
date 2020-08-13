@@ -89,8 +89,7 @@
       </div>
     </div>
 
-
-    <Footer/>
+    <Footer />
   </div>
 </template>
 <script>
@@ -273,6 +272,130 @@ p {
 .contributing-text a:hover {
   background-color: #000;
   color: var(--active);
-  border:1px solid #000
+  border: 1px solid #000;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1200px) {
+  .contributing-text a {
+    margin: 0;
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .passions-text {
+    width: 55%;
+  }
+
+  .passions-img h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .starting-point,
+  .contributing {
+    grid-column-gap: 2em;
+  }
+
+  .contributing-text a {
+    padding: 1.2em 1.5em;
+  }
+
+  .contributing-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .passions-text {
+    width: 90%;
+    top: 40%;
+  }
+
+  .passions-img p {
+    padding: 0;
+  }
+
+  .passions-img h1 {
+    font-size: 2.3rem;
+  }
+
+  .numbers {
+    padding: 2em 0;
+  }
+
+  .numbers-item {
+    border-bottom: 1px solid var(--active);
+    width: 80%;
+    margin: 0 auto 1em;
+  }
+
+  .numbers-item h2 {
+    margin: 0;
+  }
+
+  .numbers-grid {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .starting-point,
+  .contributing {
+    grid-template-columns: 1fr;
+  }
+
+  .starting-img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .numbers-item h2 {
+    align-self: center;
+  }
+
+  .passions-text {
+    text-align: center;
+  }
+
+  .passions-img {
+    height: 400px;
+  }
+
+  .passions-img h1 {
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+  }
+
+  .passions-img p {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .starting-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .quote p {
+    font-size: 1.3rem;
+  }
+
+  .quote p:last-child {
+    padding: 1em 0 2em 0;
+  }
 }
 </style>

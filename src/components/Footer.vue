@@ -54,7 +54,7 @@ export default {
 
 @media screen and (max-width: 480px) {
   .footer {
-    padding: 0 1.5em 2em;
+    padding: 2em 1.5em;
   }
 
   .container {
