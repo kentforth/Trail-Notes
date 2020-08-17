@@ -299,12 +299,19 @@ export default {
 }
 @media screen and (max-width: 320px) {
 
+  .gallery {
+    margin: 0 auto;
+    align-items: center;
+    padding: 2em 0 0 0;
+  }
+
   .gallery-item {
     max-width: 85%;
   }
 
   .container {
-    max-width: 95%;
+    max-width: 93%;
+    margin: 0 auto;
   }
   .guide h1 {
     font-size: 1.3rem;
