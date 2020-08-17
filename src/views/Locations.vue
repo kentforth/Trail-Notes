@@ -226,4 +226,94 @@ export default {
 .link-preview:hover {
   background-color: var(--active);
 }
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1200px) {
+  .guide {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .link-preview {
+    left: 37%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .guide h1 {
+    font-size: 2rem;
+    margin-top: 2em;
+  }
+
+  .guide p {
+    margin-bottom: 0;
+  }
+
+  .link-preview {
+    left: 32%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .guide p {
+    font-size: 1.5rem;
+  }
+
+  .link-preview {
+    left: 26.5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .guide p {
+    font-size: 1.3rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    text-align: center;
+    left: -3%;
+  }
+  .guide h1 {
+    font-size: 1.6rem;
+  }
+
+  .guide p {
+    font-size: 1.2rem;
+  }
+
+  .link-preview {
+    left: 23%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .guide h1 {
+    font-size: 1.3rem;
+  }
+
+  .guide p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+    left: -8%;
+  }
+
+  .link-preview {
+    font-size: 0.5rem;
+    left: 22%;
+  }
+}
 </style>

@@ -5,6 +5,7 @@ import About from "../views/About";
 import PageNotFound from "../views/PageNotFound";
 import Locations from "../views/Locations";
 import Contributing_Partners from "../views/Contributing_Partners";
+import Pricing from "../views/Pricing";
 
 Vue.use(VueRouter);
 
@@ -48,6 +49,14 @@ const routes = [
       title: "Locations"
     },
     component: Locations
+  },
+  {
+    path: "/pricing",
+    name: "Pricing",
+    meta: {
+      title: "Pricing"
+    },
+    component: Pricing
   }
 ];
 
