@@ -65,7 +65,7 @@
       </div>
     </div>
 
-      <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -83,7 +83,7 @@ export default {
 
 <style scoped>
 .interesting-text {
-  margin-top: 6em;
+  padding-top: 3em;
 }
 
 .interesting-text h2 {
@@ -91,16 +91,17 @@ export default {
   font-size: 1.8rem;
 }
 
-.interesting-text p, .offer-text p{
-    font-family: "Freight Sans Pro", sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.01em;
-    padding: 0;
-    margin: 1em 0;
-    text-align: left;
-    line-height: 1.8em;
-    text-transform: none;
-    color: rgba(20, 20, 20, 0.8);
+.interesting-text p,
+.offer-text p {
+  font-family: "Freight Sans Pro", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  padding: 0;
+  margin: 1em 0;
+  text-align: left;
+  line-height: 1.8em;
+  text-transform: none;
+  color: rgba(20, 20, 20, 0.8);
 }
 
 .line {
@@ -136,11 +137,66 @@ export default {
   margin-top: 4em;
 }
 
-
-
 .link-document {
   color: var(--link-document);
   text-decoration: underline;
   font-family: "Freight Sans Pro", sans-serif;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1200px) {
+  .interesting-text {
+    padding-top: 6em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .offer-text p {
+    line-height: 1.3em;
+  }
+
+  .offer-text h3 {
+    margin-top: 2em !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .interesting-text {
+    padding-bottom: 0 !important;
+  }
+
+  .offer {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .container {
+    padding-bottom: 2.5em;
+  }
+
+  .offer-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .line {
+    padding-bottom: 0;
+    margin: 2em 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .interesting-text h2 {
+    font-size: 1.3rem;
+  }
 }
 </style>

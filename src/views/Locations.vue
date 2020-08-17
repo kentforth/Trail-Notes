@@ -298,7 +298,6 @@ export default {
   }
 }
 @media screen and (max-width: 320px) {
-
   .gallery {
     margin: 0 auto;
     align-items: center;
