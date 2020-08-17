@@ -2,10 +2,14 @@
   <div class="footer">
     <div class="container">
       <nav class="nav">
-        <router-link to="/">Home</router-link>
-        <router-link to="/locations">Locations</router-link>
-        <router-link to="/pricing">Pricing</router-link>
-        <router-link to="/about">About</router-link>
+        <router-link to="/" @click.native="scrollToTop">Home</router-link>
+        <router-link to="/locations" @click.native="scrollToTop"
+          >Locations</router-link
+        >
+        <router-link to="/pricing" @click.native="scrollToTop"
+          >Pricing</router-link
+        >
+        <router-link to="/about" @click.native="scrollToTop">About</router-link>
 
         <router-link to="/contact">Contact</router-link>
       </nav>
@@ -15,7 +19,12 @@
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
+  }
 };
 </script>
 
@@ -71,6 +80,5 @@ export default {
     font-size: 1rem;
     margin-bottom: 1em;
   }
-
 }
 </style>

@@ -2,15 +2,23 @@
   <div id="nav">
     <div class="container">
       <div class="navigation-left">
-        <router-link to="/locations">Locations</router-link>
-        <router-link to="/pricing">Pricing</router-link>
+        <router-link to="/locations" @click.native="scrollToTop"
+          >Locations</router-link
+        >
+        <router-link to="/pricing" @click.native="scrollToTop"
+          >Pricing</router-link
+        >
       </div>
       <div class="navigation-center">
-        <router-link to="/">Photographers Trail Notes</router-link>
+        <router-link to="/" @click.native="scrollToTop"
+          >Photographers Trail Notes</router-link
+        >
       </div>
       <div class="navigation-right">
-        <router-link to="/about">About</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <router-link to="/about" @click.native="scrollToTop">About</router-link>
+        <router-link to="/contact" @click.native="scrollToTop"
+          >Contact</router-link
+        >
       </div>
       <div class="nav-hamburger" @click="showMenu">
         <div class="nav-hamburger-item"></div>
@@ -23,13 +31,36 @@
       <div class="adaptive-menu" v-if="showSideBar">
         <button @click="hideMenu" class="btn-close">X</button>
         <div class="adaptive-links-container">
-          <router-link class="adaptive-link" to="/locations"
+          <router-link
+            class="adaptive-link"
+            to="/locations"
+            @click.native="scrollToTop"
             >Locations</router-link
           >
-          <router-link class="adaptive-link" to="/pricing">Pricing</router-link>
-          <router-link class="adaptive-link" to="/members">Members</router-link>
-          <router-link class="adaptive-link" to="/about">About</router-link>
-          <router-link class="adaptive-link" to="/contact">Contact</router-link>
+          <router-link
+            class="adaptive-link"
+            to="/pricing"
+            @click.native="scrollToTop"
+            >Pricing</router-link
+          >
+          <router-link
+            class="adaptive-link"
+            to="/members"
+            @click.native="scrollToTop"
+            >Members</router-link
+          >
+          <router-link
+            class="adaptive-link"
+            to="/about"
+            @click.native="scrollToTop"
+            >About</router-link
+          >
+          <router-link
+            class="adaptive-link"
+            to="/contact"
+            @click.native="scrollToTop"
+            >Contact</router-link
+          >
         </div>
       </div>
     </transition>
@@ -45,6 +76,9 @@ export default {
     },
     hideMenu() {
       this.showSideBar = false;
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     }
   },
   data() {
@@ -221,8 +255,6 @@ export default {
 }
 
 @media screen and (max-width: 320px) {
-
-
   .nav-hamburger {
     margin-right: 0.8em;
   }
