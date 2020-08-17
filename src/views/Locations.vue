@@ -298,6 +298,14 @@ export default {
   }
 }
 @media screen and (max-width: 320px) {
+
+  .gallery-item {
+    max-width: 80%;
+  }
+
+  .container {
+    max-width: 95%;
+  }
   .guide h1 {
     font-size: 1.3rem;
   }
@@ -307,13 +315,13 @@ export default {
   }
 
   .title {
-    font-size: 0.8rem;
-    left: -8%;
+    font-size: 1rem;
+    left: 0;
   }
 
   .link-preview {
     font-size: 0.5rem;
-    left: 22%;
+    left: 25%;
   }
 }
 </style>
