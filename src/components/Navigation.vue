@@ -221,6 +221,10 @@ export default {
 }
 
 @media screen and (max-width: 320px) {
+
+  #nav a {
+    font-size: 1.8rem !important;
+  }
   .nav-hamburger {
     margin-right: 0.8em;
   }
@@ -239,6 +243,10 @@ export default {
 
   .adaptive-link {
     font-size: 2.5rem !important;
+  }
+
+  .btn-close {
+    font-size: 1.3rem;
   }
 }
 </style>

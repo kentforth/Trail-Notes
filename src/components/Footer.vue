@@ -62,7 +62,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 393px) {
   .nav {
     flex-direction: column;
   }

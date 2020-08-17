@@ -300,7 +300,7 @@ export default {
 @media screen and (max-width: 320px) {
 
   .gallery-item {
-    max-width: 80%;
+    max-width: 85%;
   }
 
   .container {
