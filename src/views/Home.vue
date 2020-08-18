@@ -37,111 +37,8 @@
       </div>
     </div>
 
-    <!--ADVENTURE-->
-    <div class="adventure">
-      <div class="container">
-        <h2>START YOUR NEXT ADVENTURE</h2>
-        <p>We provide a comprehensive guide to over 90 locations and</p>
-        <p>add at least 1 new location each month</p>
-
-        <hr class="line" />
-        <h2>SUMMER SPECIAL</h2>
-
-        <div class="price" @click="showForm">
-          <p>Click to join</p>
-          <span>$</span>
-          <strong>19.99</strong>
-          <span>/First Year</span>
-          <p>$9.99 Annual Renewal</p>
-        </div>
-
-        <modal name="my-first-modal" :width="690" height="auto">
-          <div class="modal">
-            <div class="name">
-              <div class="first-name">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" />
-              </div>
-              <div class="last-name">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" />
-              </div>
-            </div>
-
-            <div class="email">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" />
-            </div>
-
-            <div class="email">
-              <label for="confirmEmail">Confirm Your Email</label>
-              <input type="email" id="confirmEmail" />
-            </div>
-
-            <div class="password">
-              <label for="password">Your Password</label>
-              <input type="password" id="password" />
-            </div>
-
-            <div class="describe">
-              <label for="interests">Describe Your Photography Interest</label>
-              <div id="interests">
-                <div class="interests-item">
-                  <input
-                    type="radio"
-                    id="enthusiast"
-                    name="interest"
-                    value="enthusiast"
-                  />
-                  <span>Outdoor Emthusiast</span>
-                </div>
-
-                <div class="interests-item">
-                  <input
-                    type="radio"
-                    id="beginner"
-                    name="interest"
-                    value="beginner"
-                  />
-                  <span>Beginner</span>
-                </div>
-
-                <div class="interests-item">
-                  <input
-                    type="radio"
-                    id="intermediate"
-                    name="interest"
-                    value="intermediate"
-                  />
-                  <span>Intermediate</span>
-                </div>
-
-                <div class="interests-item">
-                  <input
-                    type="radio"
-                    id="amateur"
-                    name="interest"
-                    value="amateur"
-                  />
-                  <span>Serious Amateur</span>
-                </div>
-
-                <div class="interests-item">
-                  <input
-                    type="radio"
-                    id="professional"
-                    name="interest"
-                    value="amateur"
-                  />
-                  <span>Professional</span>
-                </div>
-              </div>
-              <button class="btn-signUp" type="submit">SIGN UP</button>
-            </div>
-          </div>
-        </modal>
-      </div>
-    </div>
+    <!--PRICE-->
+    <Price />
 
     <!--TRAIL NOTES-->
     <div class="trail-notes">
@@ -173,6 +70,7 @@
 import Navigation from "../components/Navigation";
 import Cards_Locations from "../components/Cards_Locations";
 import Footer from "../components/Footer";
+import Price from "../components/Price";
 
 //Modal window
 import VModal from "vue-js-modal/dist/index.nocss.js";
@@ -188,15 +86,16 @@ export default {
   components: {
     Navigation,
     Cards_Locations,
-    Footer
+    Footer,
+    Price
   },
   methods: {
     showForm() {
       this.$modal.show("my-first-modal");
-    },
-    data() {
-      return {};
     }
+  },
+  data() {
+    return {};
   }
 };
 </script>
@@ -266,8 +165,9 @@ export default {
 }
 
 .adventure p {
-  padding: 1.3em 0 0 0;
+  padding: 0;
   color: #fff;
+  font-size: 1.5rem;
 }
 
 .line {
@@ -276,60 +176,6 @@ export default {
   height: 0;
   border: 1px solid var(--active);
   margin: 2.5em 0;
-}
-
-.price {
-  width: 50%;
-  margin: 2em auto;
-  border: 1px solid var(--active);
-  padding: 1em 0;
-  transition: all 0.1s linear;
-}
-
-.price:hover {
-  background-color: var(--active);
-  cursor: pointer;
-}
-
-.price:hover > p {
-  color: var(--primary);
-}
-
-.price:hover > strong {
-  color: var(--primary);
-}
-
-.price p {
-  text-transform: uppercase;
-  padding: 0;
-  margin-bottom: 1em;
-  font-size: 1rem;
-}
-.price strong {
-  font-size: 4rem;
-  font-family: "Helvetica", sans-serif;
-  color: var(--active);
-}
-
-.price > span {
-  position: absolute;
-  transform: translateX(-25px);
-  font-size: 2.3rem;
-  font-weight: 600;
-  color: var(--active);
-}
-
-.price span:nth-child(4) {
-  font-size: 1rem;
-  transform: translate(0, 3em);
-}
-
-.price p:last-child {
-  font-size: 1.5rem;
-  margin-top: 1em;
-  margin-bottom: 0;
-  letter-spacing: 0;
-  text-transform: initial;
 }
 
 .trail-notes h2 {
@@ -402,40 +248,6 @@ input {
 .password input {
   width: 100%;
 }
-#interests {
-  margin-top: 1em;
-}
-
-.interests-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 0.5em;
-}
-
-.interests-item input {
-  margin: 0;
-}
-
-.interests-item span {
-  margin-left: 7px;
-}
-
-.btn-signUp {
-  background-color: var(--active);
-  cursor: pointer;
-  outline: none;
-  border: none;
-  width: 100%;
-  padding: 1em 2em;
-  margin-top: 1.5em;
-  transition: all 0.1s linear;
-}
-
-.btn-signUp:hover {
-  background-color: var(--primary);
-  color: var(--active);
-}
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1200px) {
@@ -470,11 +282,6 @@ input {
   .adventure {
     padding-bottom: 3em;
   }
-
-  .price {
-    margin: 2.5em auto 0;
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 320px) {
@@ -484,18 +291,6 @@ input {
 
   .canyon-text {
     font-size: 1.8rem;
-  }
-
-  .price strong {
-    font-size: 3rem;
-  }
-
-  .price > span {
-    font-size: 1.7rem;
-  }
-
-  .price span:nth-child(4) {
-    transform:translate(-20px, 2.5em);
   }
 }
 </style>
