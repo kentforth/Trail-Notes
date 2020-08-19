@@ -180,6 +180,7 @@ export default {
 .price > span {
   position: absolute;
   transform: translateX(-0.7em);
+  -webkit-transform: translateX(-0.7em);
   font-size: 2.3rem;
   font-weight: 600;
   color: var(--active);
@@ -361,6 +362,7 @@ input {
 
   .price span:nth-child(4) {
     transform: translate(-20px, 2.5em);
+    -webkit-transform: translate(-20px, 2.5em);
   }
 }
 </style>
