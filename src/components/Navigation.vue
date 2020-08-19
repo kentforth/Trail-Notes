@@ -264,10 +264,13 @@ export default {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 393px) {
   .nav-hamburger {
-    margin-right: 3.5em;
+    margin-right: 0;
   }
+}
+
+@media screen and (max-width: 320px) {
 
   .nav-hamburger-item {
     width: 25px;
