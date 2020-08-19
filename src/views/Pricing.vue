@@ -15,9 +15,9 @@
 
     <!--PRIMARY FEATURES-->
     <Primary_Features
-      v-for="(feature, featureIndex) in features"
+      v-for="(feature, index) in features"
       :feature="feature"
-      :key="featureIndex"
+      :key="'primary' + index"
       title="PRIMARY FEATURES"
       text="PHOTOGRAPHER GEARED INFORMATION"
     />
@@ -45,9 +45,9 @@
 
     <!--ADDITIONAL FEATURES-->
     <Primary_Features
-      v-for="(feature, featureIndex) in additionalFeatures"
+      v-for="(feature, index) in additionalFeatures"
       :feature="feature"
-      :key="featureIndex"
+      :key="'secondary' + index"
       title="ADDITIONAL FEATURES"
       text="OTHER HELPFUL LOCATION INFORMATION"
     />
@@ -297,5 +297,160 @@ export default {
   top: -14em;
   left: -23em;
   bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .built__text {
+    left: 18em;
+  }
+
+  .adventurers__text {
+    left: -20em;
+    top: -17em;
+  }
+  .adventurers {
+    margin-bottom: 0;
+    height: 45em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .build-for-photographers {
+    height: 28em;
+  }
+
+  .built__text {
+    padding: 1.8em;
+    left: 13em;
+  }
+
+  .built__text h2,
+  .adventurers__text h2 {
+    font-size: 1rem;
+  }
+
+  .built__text p,
+  .adventurers__text p {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+  }
+
+  .adventurers {
+    height: 36em;
+  }
+
+  .adventurers__text {
+    padding: 1.8em;
+    left: -17em;
+    top: -14em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .plan h3 {
+    margin-top: 2em;
+    font-size: 1.5rem;
+  }
+
+  .plan h1 {
+    font-size: 3rem;
+    max-width: 80%;
+  }
+
+  .built__text {
+    width: 80%;
+    left: 6em;
+    top: -5em;
+  }
+
+  .built__text h2,
+  .adventurers__text h2 {
+    font-size: 0.7rem;
+  }
+
+  .built__text a,
+  .adventurers__text a {
+    font-size: 0.5rem;
+  }
+
+  .adventurers__text {
+    width: 80%;
+    left: -6em;
+    top: -5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .adventurers {
+    height: 30em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .plan {
+    padding-top: 15em;
+  }
+
+  .plan h1 {
+    font-size: 2.5rem;
+  }
+
+  .built__text {
+    left: 0;
+  }
+
+  .adventurers__text {
+    left: 0.5em;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .plan h3 {
+    font-size: 1.2rem;
+  }
+
+  .plan h1 {
+    font-size: 2rem;
+  }
+
+  .build-for-photographers {
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .plan {
+    height: 500px;
+  }
+
+  .build-for-photographers {
+    height: 21em;
+  }
+
+  .built__text {
+    left: 28px;
+  }
+
+  .built__text,
+  .adventurers__text {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .built__text h2,  .adventurers__text h2{
+    font-size: 0.6rem;
+  }
+
+  .adventurers__text {
+    left: 1.6em;
+    top: -3em;
+  }
+
+  .adventurers {
+    height: 28em;
+  }
 }
 </style>

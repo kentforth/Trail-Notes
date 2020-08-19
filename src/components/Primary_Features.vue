@@ -77,7 +77,7 @@ export default {
   },
   props: {
     feature: {
-      type: Array
+      type: Object
     },
     title: {
       type: String
@@ -138,5 +138,69 @@ export default {
   font-family: "Freight Sans Pro", sans-serif;
   font-weight: 400;
   line-height: 1.5;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 600px) {
+  .primary-features h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .primary-features h1 {
+    font-size: 1.5rem;
+  }
+
+  .primary-features h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .container {
+    max-width: 90%;
+  }
+  .primary-features h3 {
+    font-size: 1rem;
+  }
+
+  .feature__text h2 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .features {
+    max-width: 100%;
+    grid-gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-item {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .feature__img {
+    max-width: 100%;
+    margin-left: 1.5em;
+  }
+
+  .feature__img img {
+    width: 70%;
+  }
+
+  .feature__text {
+    margin-left: 0.5em;
+    justify-content: center;
+  }
+
+  .feature__text p {
+    font-size: 15px;
+  }
+
 }
 </style>

@@ -290,14 +290,67 @@ input {
   color: var(--active);
 }
 
-@media screen and (max-width: 480px) {
+/*MEDIA QURIES*/
+
+@media screen and (max-width: 900px) {
   .price {
-    margin: 2.5em auto 0;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .adventure {
+    padding-top: 3em;
+  }
+
+  .price {
     width: 100%;
   }
 }
 
+@media screen and (max-width: 480px) {
+  .adventure {
+    padding-top: 5em !important;
+  }
+
+  .price {
+    margin: 2.5em auto 0;
+    width: 100%;
+  }
+
+  .price strong {
+    font-size: 3rem;
+  }
+
+  .price span {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 393px) {
+
+  .adventure {
+    padding-bottom: 5em !important;
+  }
+  .adventure p {
+    font-size: 1.2rem;
+  }
+
+  .price p, .price p:last-child {
+    font-size: 1rem;
+  }
+
+  .price span:nth-child(4) {
+    font-size: 0.6rem;
+  }
+}
+
 @media screen and (max-width: 320px) {
+
+  .container {
+    max-width: 90%;;
+  }
+
   .price strong {
     font-size: 3rem;
   }

@@ -216,6 +216,10 @@ export default {
     margin: 0;
   }
 
+  .nav-hamburger {
+    margin-right: 2em;
+  }
+
   .nav-hamburger-item {
     width: 2.5em;
     display: block;
@@ -254,9 +258,15 @@ export default {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .nav-hamburger {
+    margin-right: 3em;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .nav-hamburger {
-    margin-right: 0.8em;
+    margin-right: 3.5em;
   }
 
   .nav-hamburger-item {
@@ -264,7 +274,7 @@ export default {
   }
 
   .navigation-center a {
-    font-size: 1rem;
+    font-size: 0.8rem !important;
   }
 
   .adaptive-menu {
