@@ -440,7 +440,8 @@ export default {
     padding: 1em;
   }
 
-  .built__text h2,  .adventurers__text h2{
+  .built__text h2,
+  .adventurers__text h2 {
     font-size: 0.6rem;
   }
 

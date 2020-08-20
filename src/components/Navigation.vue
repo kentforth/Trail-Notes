@@ -271,7 +271,6 @@ export default {
 }
 
 @media screen and (max-width: 320px) {
-
   .nav-hamburger-item {
     width: 25px;
   }

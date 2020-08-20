@@ -6,6 +6,7 @@ import PageNotFound from "../views/PageNotFound";
 import Locations from "../views/Locations";
 import Contributing_Partners from "../views/Contributing_Partners";
 import Pricing from "../views/Pricing";
+import Contact from "../views/Contact";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,14 @@ const routes = [
       title: "About"
     },
     component: About
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    meta: {
+      title: "Contact"
+    },
+    component: Contact
   },
   {
     path: "/contributing-partners",

@@ -201,6 +201,5 @@ export default {
   .feature__text p {
     font-size: 15px;
   }
-
 }
 </style>

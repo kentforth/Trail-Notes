@@ -329,7 +329,6 @@ input {
 }
 
 @media screen and (max-width: 393px) {
-
   .adventure {
     padding-bottom: 5em !important;
   }
@@ -337,7 +336,8 @@ input {
     font-size: 1.2rem;
   }
 
-  .price p, .price p:last-child {
+  .price p,
+  .price p:last-child {
     font-size: 1rem;
   }
 
@@ -347,9 +347,8 @@ input {
 }
 
 @media screen and (max-width: 320px) {
-
   .container {
-    max-width: 90%;;
+    max-width: 90%;
   }
 
   .price strong {
