@@ -289,16 +289,18 @@ input {
     left: 9%;
   }
 
-  .show-way p, .details strong {
+  .show-way p,
+  .details strong {
     font-size: 1.2rem;
   }
 
-  .show-way h1, .details h2 {
+  .show-way h1,
+  .details h2 {
     font-size: 5vw;
   }
 
   .details h2 {
-    font-family: 'Proxima Nova Extrabold', sans-serif !important;
+    font-family: "Proxima Nova Extrabold", sans-serif !important;
   }
 
   .trail-notes h2 {

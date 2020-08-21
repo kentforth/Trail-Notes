@@ -104,6 +104,4 @@ export default {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-
-
 </style>
