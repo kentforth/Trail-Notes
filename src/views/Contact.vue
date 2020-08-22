@@ -220,4 +220,76 @@ textarea:focus {
   padding: 0;
   text-align: left;
 }
+
+@media screen and (max-width: 1200px) {
+  .form {
+    padding-top: 8em;
+  }
+
+  .contact-content {
+    height: calc(100vh + 2em);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    padding-top: 10em;
+  }
+
+  .contact-content {
+    height: calc(100vh + 4em);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .form {
+    padding-top: 8em;
+  }
+
+  .invalid-feedback {
+    font-size: 1.2rem;
+  }
+
+  .contact-content {
+    height: calc(100vh);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .form {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .form {
+    padding-top: 6em;
+  }
+
+  label {
+    font-size: 0.7rem;
+  }
+  .invalid-feedback {
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.7rem;
+  }
+
+  .btn-submit {
+    font-size: 1.2rem;
+  }
+
+  .contact-content {
+    height: calc(100vh);
+  }
+}
 </style>
