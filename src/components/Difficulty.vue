@@ -197,4 +197,41 @@ p {
   line-height: 1.8em;
   white-space: pre-wrap;
 }
+
+@media screen and (max-width: 600px) {
+  .title img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title h2 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .title h2 {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    .title h2 {
+      font-size: 1.2rem;
+    }
+
+    .title img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
 </style>

@@ -366,4 +366,114 @@ export default {
   border-top: solid 1px rgba(128, 128, 128, 0.3);
   margin: 3em 0;
 }
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+
+  .location {
+    padding-top: 3em;
+  }
+
+  .header-title {
+    bottom: -2em;
+    left: 3em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .body-text h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-title {
+    bottom: -1em;
+    left: 2em;
+    padding: 1em;
+    width: 40%;
+  }
+
+  .header-title h1 {
+    font-size: 1.2rem;
+  }
+
+  .body-text h3 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .header-title h1 {
+    font-size: 0.8rem;
+  }
+
+  .header-title p {
+    font-size: 0.7rem;
+  }
+
+  .body-text {
+    margin-top: 3em;
+  }
+
+  .body-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .body-text p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-title {
+    bottom: -2em;
+    left: -1.6em;
+  }
+
+  .body-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .line {
+    margin: 1.5em 0;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .container {
+    padding-bottom: 0;
+  }
+
+  .header-title {
+    bottom: -1em;
+  }
+
+  .header-title h1 {
+    font-size: 0.6rem;
+  }
+
+  .header-title p {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-image img {
+    width: 100%;
+  }
+
+  .header-title {
+    width: 60%;
+    left: 3.1em;
+    bottom: -2em;
+  }
+}
 </style>

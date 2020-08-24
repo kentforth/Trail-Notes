@@ -251,6 +251,12 @@ export default {
     left: 0;
   }
 }
+@media screen and (max-width: 1200px) {
+  #nav {
+    left: 0;
+    top: 0;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .navigation-center a {
