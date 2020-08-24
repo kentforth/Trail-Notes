@@ -8,9 +8,11 @@ import Contributing_Partners from "../views/Contributing_Partners";
 import Pricing from "../views/Pricing";
 import Contact from "../views/Contact";
 
+import locationRoutes from "./locationRoutes";
+
 Vue.use(VueRouter);
 
-const routes = [
+const baseRoutes = [
   {
     path: "*",
     name: "PageNotFound",
@@ -68,6 +70,8 @@ const routes = [
     component: Pricing
   }
 ];
+
+const routes = baseRoutes.concat(locationRoutes);
 
 const router = new VueRouter({
   mode: "history",

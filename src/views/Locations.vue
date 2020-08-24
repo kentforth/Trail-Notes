@@ -28,7 +28,10 @@
         </h2>
         <div class="overlay"></div>
 
-        <router-link :to="{ path: links[imageIndex] }" class="link-preview"
+        <router-link
+          :to="{ path: links[imageIndex] }"
+          class="link-preview"
+          target="_blank"
           >Preview Location</router-link
         >
       </div>
@@ -73,7 +76,7 @@ export default {
         require("../assets/images/Locations/lee_flat.jpg"),
         require("../assets/images/Locations/riva_sunrise.jpg"),
         require("../assets/images/Locations/narrows.jpg"),
-        require("../assets/images/Locations/crack.jpg"),
+        require("../assets/images/Locations/balanced-rock.jpg"),
         require("../assets/images/Locations/canyon.jpg")
       ],
       titles: [
@@ -89,7 +92,7 @@ export default {
         { name: "Firefall" },
         { name: "Grand (Chocolate) Falls" },
         { name: "Bisti Badlands" },
-        { name: "Bonsai Rocks" },
+        { name: "Bonsai Rock" },
         { name: "Fallen Roof Ruin" },
         { name: "Monument Valley" },
         { name: "Glacier Point" },
@@ -99,7 +102,7 @@ export default {
         { name: "Joshua Tree at Lee Flat" },
         { name: "Owen River Sunrise" },
         { name: "The Narrows" },
-        { name: "The Crack" },
+        { name: "Balanced Rock" },
         { name: "Upper Antelope Canyon" }
       ],
       links: [
@@ -115,17 +118,17 @@ export default {
         "/locations/firefall",
         "/locations/grand-falls",
         "/locations/bisti-badlands",
-        "/locations/bonsai-rocks",
+        "/locations/bonsai-rock",
         "/locations/fallen-roof-ruin",
         "/locations/monument-valley",
         "/locations/glacier-point",
         "/locations/twilight-near-mather-point",
         "/locations/mesa-arch",
         "/locations/false-kiva",
-        "/locations/joshua-lee-flat",
+        "/locations/joshua-trees-lee-flat",
         "/locations/owen-river-sunrise",
         "/locations/narrows",
-        "/locations/crack",
+        "/locations/balanced-rock",
         "/locations/upper-antelope-canyon"
       ]
     };
