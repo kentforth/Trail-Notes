@@ -18,89 +18,179 @@
       </div>
 
       <modal name="my-first-modal" :width="690" height="auto">
-        <div class="modal">
-          <div class="name">
-            <div class="first-name">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" />
-            </div>
-            <div class="last-name">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" />
-            </div>
-          </div>
-
-          <div class="email">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" />
-          </div>
-
-          <div class="email">
-            <label for="confirmEmail">Confirm Your Email</label>
-            <input type="email" id="confirmEmail" />
-          </div>
-
-          <div class="password">
-            <label for="password">Your Password</label>
-            <input type="password" id="password" />
-          </div>
-
-          <div class="describe">
-            <label for="interests">Describe Your Photography Interest</label>
-            <div id="interests">
-              <div class="interests-item">
+        <form action="#" class="form" @submit.prevent="signUp">
+          <div class="modal">
+            <div class="name">
+              <div class="first-name">
+                <label for="firstName">First Name</label>
                 <input
-                  type="radio"
-                  id="enthusiast"
-                  name="interest"
-                  value="enthusiast"
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  v-model.trim="form.firstName"
+                  :class="$v.form.firstName.$error ? 'is-invalid' : ''"
                 />
-                <span>Outdoor Emthusiast</span>
+                <p
+                  class="invalid-feedback"
+                  v-if="$v.form.firstName.$dirty && !$v.form.firstName.required"
+                >
+                  Field is required
+                </p>
               </div>
-
-              <div class="interests-item">
+              <div class="last-name">
+                <label for="lastName">Last Name</label>
                 <input
-                  type="radio"
-                  id="beginner"
-                  name="interest"
-                  value="beginner"
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  v-model.trim="form.lastName"
+                  :class="$v.form.lastName.$error ? 'is-invalid' : ''"
                 />
-                <span>Beginner</span>
-              </div>
-
-              <div class="interests-item">
-                <input
-                  type="radio"
-                  id="intermediate"
-                  name="interest"
-                  value="intermediate"
-                />
-                <span>Intermediate</span>
-              </div>
-
-              <div class="interests-item">
-                <input
-                  type="radio"
-                  id="amateur"
-                  name="interest"
-                  value="amateur"
-                />
-                <span>Serious Amateur</span>
-              </div>
-
-              <div class="interests-item">
-                <input
-                  type="radio"
-                  id="professional"
-                  name="interest"
-                  value="amateur"
-                />
-                <span>Professional</span>
+                <p
+                  class="invalid-feedback"
+                  v-if="$v.form.lastName.$dirty && !$v.form.lastName.required"
+                >
+                  Field is required
+                </p>
               </div>
             </div>
-            <button class="btn-signUp" type="submit">SIGN UP</button>
+
+            <div class="email">
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                v-model.trim="form.email"
+                :class="$v.form.email.$error ? 'is-invalid' : ''"
+              />
+              <p
+                class="invalid-feedback"
+                v-if="$v.form.email.$dirty && !$v.form.email.required"
+              >
+                Email is required
+              </p>
+              <p
+                class="invalid-feedback"
+                v-if="$v.form.email.$dirty && !$v.form.email.email"
+              >
+                Enter an email address
+              </p>
+            </div>
+
+            <div class="email">
+              <label for="confirmEmail">Confirm Your Email</label>
+              <input
+                type="email"
+                id="confirmEmail"
+                name="confirmEmail"
+                v-model.trim="form.confirmEmail"
+                :class="$v.form.confirmEmail.$error ? 'is-invalid' : ''"
+              />
+              <p
+                class="invalid-feedback"
+                v-if="
+                  $v.form.confirmEmail.$dirty && !$v.form.confirmEmail.required
+                "
+              >
+                Email is required
+              </p>
+              <p
+                class="invalid-feedback"
+                v-if="
+                  $v.form.confirmEmail.$dirty && !$v.form.confirmEmail.email
+                "
+              >
+                Enter an email address
+              </p>
+              <p
+                class="invalid-feedback"
+                v-if="
+                  $v.form.confirmEmail.$dirty &&
+                    !$v.form.confirmEmail.sameAsEmail
+                "
+              >
+                Please enter the same email
+              </p>
+            </div>
+
+            <div class="password">
+              <label for="password">Your Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                v-model.trim="form.password"
+                :class="$v.form.password.$error ? 'is-invalid' : ''"
+              />
+              <p
+                class="invalid-feedback"
+                v-if="$v.form.password.$dirty && !$v.form.password.required"
+              >
+                Field is required
+              </p>
+            </div>
+
+            <div class="describe">
+              <label for="interests">Describe Your Photography Interest</label>
+              <div id="interests">
+                <div class="interests-item">
+                  <input
+                    type="radio"
+                    id="enthusiast"
+                    name="interest"
+                    value="enthusiast"
+                    checked
+                  />
+                  <span>Outdoor Emthusiast</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                    type="radio"
+                    id="beginner"
+                    name="interest"
+                    value="beginner"
+                  />
+                  <span>Beginner</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                    type="radio"
+                    id="intermediate"
+                    name="interest"
+                    value="intermediate"
+                  />
+                  <span>Intermediate</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                    type="radio"
+                    id="amateur"
+                    name="interest"
+                    value="amateur"
+                  />
+                  <span>Serious Amateur</span>
+                </div>
+
+                <div class="interests-item">
+                  <input
+                    type="radio"
+                    id="professional"
+                    name="interest"
+                    value="amateur"
+                  />
+                  <span>Professional</span>
+                </div>
+              </div>
+              <button class="btn-signUp" type="submit" @click="signUp">
+                SIGN UP
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </modal>
     </div>
   </div>
@@ -110,15 +200,74 @@
 import VModal from "vue-js-modal/dist/index.nocss.js";
 import "vue-js-modal/dist/styles.css";
 import Vue from "vue";
+import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
+
+import { validationMixin } from "vuelidate";
+import { required, email, sameAs } from "vuelidate/lib/validators";
 
 Vue.use(VModal, {
   adaptive: true
 });
 export default {
+  mixins: [validationMixin],
   name: "Price",
   methods: {
     showForm() {
       this.$modal.show("my-first-modal");
+    },
+    signUp(e) {
+      let self = this;
+
+      this.$v.form.$touch();
+      if (this.$v.form.$error) {
+        return;
+      }
+
+      Swal.fire({
+        title: "Thank you for signing up",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 2500
+      }).then(function() {
+        self.$modal.hide("my-first-modal");
+        window.scrollTo(0, 0);
+        emailjs
+          .sendForm(
+            "mail_ru",
+            "trail_notes",
+            e.target,
+            "user_Q62B7RRlfcIcFCktKXEDM"
+          )
+          .then(
+            result => {
+              console.log("SUCCESS!", result.status, result.text);
+            },
+            error => {
+              console.log("FAILED...", error);
+            }
+          );
+      });
+    }
+  },
+  data() {
+    return {
+      form: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        confirmEmail: "",
+        password: ""
+      }
+    };
+  },
+  validations: {
+    form: {
+      firstName: { required },
+      lastName: { required },
+      email: { required, email },
+      confirmEmail: { required, email, sameAsEmail: sameAs("email") },
+      password: { required }
     }
   }
 };
@@ -289,6 +438,28 @@ input {
 .btn-signUp:hover {
   background-color: var(--primary);
   color: var(--active);
+}
+
+.modal p {
+  margin: 0 0 0.7em 0;
+  color: orangered;
+  font-size: 1rem;
+  opacity: 1;
+}
+
+.is-invalid {
+  border: 1px solid orangered;
+  margin-bottom: 0;
+}
+
+.invalid-feedback {
+  color: orangered;
+  font-family: "Freight Sans Pro", sans-serif;
+  margin: 0 0 0.7em 0;
+  padding: 0;
+  text-align: left;
+  opacity: 1;
+  transition: all 0.2s ease;
 }
 
 /*MEDIA QURIES*/
