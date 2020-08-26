@@ -17,7 +17,15 @@
         <p>$9.99 Annual Renewal</p>
       </div>
 
-      <modal name="my-first-modal" :width="690" height="auto">
+      <vue-modaltor
+        name="my-first-modal"
+        :visible="open"
+        @hide="open = false"
+        :resize-width="{ 1200: '60%', 992: '80%', 768: '90%', 393: '80%' }"
+        :bg-overlay="'black'"
+        bg-panel="white"
+        :animation-panel="'modal-slide-top'"
+      >
         <form action="#" class="form" @submit.prevent="signUp">
           <div class="modal">
             <div class="name">
@@ -191,7 +199,7 @@
             </div>
           </div>
         </form>
-      </modal>
+      </vue-modaltor>
     </div>
   </div>
 </template>
@@ -209,12 +217,13 @@ import { required, email, sameAs } from "vuelidate/lib/validators";
 Vue.use(VModal, {
   adaptive: true
 });
+
 export default {
   mixins: [validationMixin],
   name: "Price",
   methods: {
     showForm() {
-      this.$modal.show("my-first-modal");
+      this.open = true;
     },
     signUp(e) {
       let self = this;
@@ -258,7 +267,11 @@ export default {
         email: "",
         confirmEmail: "",
         password: ""
-      }
+      },
+      modalWidth: 700,
+      modalHeight: 900,
+      open: false,
+      display: "none"
     };
   },
   validations: {
@@ -369,7 +382,12 @@ strong {
   text-align: left;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
+}
+
+#firstName,
+#lastName {
+  width: 100%;
 }
 
 .modal input {
@@ -380,6 +398,12 @@ strong {
 .modal input:focus {
   border: 1px solid var(--active);
   outline: none;
+}
+
+.modal-vue-overlay {
+  -webkit-filter: blur(5px) !important;
+  -ms-filter: blur(5px) !important;
+  filter: blur(5px) !important;
 }
 
 .email {
@@ -463,6 +487,12 @@ input {
 }
 
 /*MEDIA QURIES*/
+@media screen and (max-width: 1200px) {
+  .modal {
+    margin-top: 3em;
+    padding-bottom: 0;
+  }
+}
 
 @media screen and (max-width: 900px) {
   .price {
@@ -473,6 +503,14 @@ input {
 @media screen and (max-width: 600px) {
   .adventure {
     padding-top: 3em;
+  }
+
+  .modal input {
+    font-size: 1rem;
+  }
+
+  #password {
+    margin-top: 0.4em;
   }
 
   .price {
@@ -514,6 +552,11 @@ input {
 
   .price span:nth-child(4) {
     font-size: 0.6rem;
+  }
+
+  .name {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
   }
 }
 
