@@ -72,15 +72,6 @@ import Cards_Locations from "../components/Cards_Locations";
 import Footer from "../components/Footer";
 import Price from "../components/Price";
 
-//Modal window
-import VModal from "vue-js-modal/dist/index.nocss.js";
-import "vue-js-modal/dist/styles.css";
-import Vue from "vue";
-
-Vue.use(VModal, {
-  adaptive: true
-});
-
 export default {
   name: "Home",
   components: {

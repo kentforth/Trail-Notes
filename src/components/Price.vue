@@ -205,18 +205,11 @@
 </template>
 
 <script>
-import VModal from "vue-js-modal/dist/index.nocss.js";
-import "vue-js-modal/dist/styles.css";
-import Vue from "vue";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
 
 import { validationMixin } from "vuelidate";
 import { required, email, sameAs } from "vuelidate/lib/validators";
-
-Vue.use(VModal, {
-  adaptive: true
-});
 
 export default {
   mixins: [validationMixin],

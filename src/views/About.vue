@@ -83,7 +83,7 @@
           and conservation of the locations, quality standards, integrity and
           goals as Photographers Trail Notes.
         </p>
-        <router-link to="/contributing-partners"
+        <router-link to="/contributing-partners" @click.native="scrollToTop"
           >What to learn more ➝</router-link
         >
       </div>
@@ -101,6 +101,11 @@ export default {
   components: {
     Navigation,
     Footer
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
   }
 };
 </script>

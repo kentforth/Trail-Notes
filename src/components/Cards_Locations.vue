@@ -10,7 +10,7 @@
           Dead Horse Point - with its iconic gooseneck of the Colorado River is
           a must see when visiting the Moab, UT area.
         </p>
-        <router-link to="/dead-horse-point"
+        <router-link to="/locations/dead-horse" @click.native="scrollToTop"
           >View Dead Horse Point →</router-link
         >
       </div>
@@ -18,29 +18,38 @@
 
     <div class="card-item">
       <div class="card-image">
-        <img src="../assets/images/image - 003.jpg" alt="image canyon" />
+        <img
+          src="../assets/images/Locations/false_kiva.jpg"
+          alt="image canyon"
+        />
       </div>
       <div class="card-text">
-        <h3>PALOUSE FALLS</h3>
+        <h3>Falls Kiva</h3>
         <p>
-          The iconic Palouse Falls is considered to be the official waterfall of
-          Washington State.
+          The False Kiva is one of the most intriguing locations for landscape
+          photographers in the American Southwest
         </p>
-        <router-link to="/dead-horse-point">View Palouse Falls →</router-link>
+        <router-link to="/locations/false-kiva" @click.native="scrollToTop"
+          >View False Kiva →</router-link
+        >
       </div>
     </div>
 
     <div class="card-item">
       <div class="card-image">
-        <img src="../assets/images/image - 004.jpg" alt="image canyon" />
+        <img
+          src="../assets/images/Locations/mesa_arch.jpg"
+          alt="image canyon"
+        />
       </div>
-      <div class="card-text">
-        <h3>DALLAS DIVIDE</h3>
+      <div class="card-text mesa">
+        <h3>Mesa Arch</h3>
         <p>
-          The Dallas Divide is one of the great of American vistas and will
-          simply take your breath away.
+          The Mesa Arch is the “crown jewel” of the Canyonlands National Park.
         </p>
-        <router-link to="/dead-horse-point">View Dallas Divide →</router-link>
+        <router-link to="/locations/mesa-arch" @click.native="scrollToTop"
+          >View Mesa Arch →</router-link
+        >
       </div>
     </div>
   </div>
@@ -55,6 +64,11 @@ export default {
     AOS.init({
       duration: 500
     });
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
   }
 };
 </script>
@@ -72,16 +86,24 @@ export default {
 .card-image {
   background-size: cover;
   background-repeat: no-repeat;
+  height: 250px;
 }
 
 .card-image img {
   max-width: 100%;
   vertical-align: top;
+  width: 100%;
+  height: 100%;
 }
 
 .card-text {
   padding: 6%;
   background-color: #000;
+  height: 250px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-text h3 {
@@ -97,11 +119,21 @@ export default {
   font-size: 1rem;
   color: #b0b0b0;
   padding: 1em 0;
+  margin: 0;
 }
 
 .card-text a {
   color: var(--active);
   font-size: 0.8rem;
   text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.mesa {
+  padding-bottom: 1.7em !important;
+}
+
+.mesa a {
+  padding-top: 2em;
 }
 </style>
