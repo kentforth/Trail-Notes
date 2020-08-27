@@ -2,5 +2,12 @@ module.exports = {
     devServer: {
         port: 3000
     },
-    hints: false
+    configureWebpack:{
+        optimization: {
+            splitChunks: {
+                minSize: 10000,
+                maxSize: 250000,
+            }
+        }
+    }
 }
