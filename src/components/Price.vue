@@ -20,7 +20,7 @@
       <vue-modaltor
         name="my-first-modal"
         :visible="open"
-        @hide="open = false"
+        @hide="hideModal"
         :resize-width="{ 1200: '60%', 992: '80%', 768: '90%', 393: '80%' }"
         :bg-overlay="'black'"
         bg-panel="white"
@@ -215,6 +215,9 @@ export default {
   mixins: [validationMixin],
   name: "Price",
   methods: {
+    hideModal() {
+      this.open = false;
+    },
     showForm() {
       this.open = true;
     },
@@ -232,8 +235,8 @@ export default {
         showConfirmButton: false,
         timer: 2500
       }).then(function() {
-        self.$modal.hide("my-first-modal");
         window.scrollTo(0, 0);
+        self.hideModal();
         emailjs
           .sendForm(
             "mail_ru",
